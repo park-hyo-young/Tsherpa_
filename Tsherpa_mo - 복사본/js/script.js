@@ -12,6 +12,8 @@ $(document).ready(function(){
         $('.popup-share').hide();
     });
 
+    
+
     // 이름순/번호순, 페이지 이동 버튼에 active
     $('.list-menu-group > a, .next-pagebtn-group > .page-num').on('click',function(e){
         e.preventDefault();

@@ -5,13 +5,13 @@
    </div>
 </header>
 <div class="menu-list-area popup-pos tea-list-popup">
-   <div class="inner">
+   <div class="menu-inner">
        <div class="list-popup flex-btw">
            <h2><a href="#none"><img src="images/mo_ic_home.png" alt="홈화면으로"></a></h2>
            <a href="#none"><img src="images/mo_icon_close.png" alt="메뉴 닫기"></a>
        </div>
         <!-- 개설된 클래스 없을 시 -->
-        <!-- <figure class="none-class-box">
+        <figure class="none-class-box">
            <img src="images/mo_img_class.png" alt="개설된 클래스가 없습니다. ">
         </figure>
         <div class="none-class-ment">
@@ -20,7 +20,7 @@
                PC에서 클래스를 개설한 후<br>
                이용해주세요
            </p>
-        </div> -->
+        </div>
         <!-- 개설된 클래스 있을 시 -->
         <figure class="have-class-box">
            <img src="images/3.svg" alt="서울 가산 초등학교">
@@ -29,10 +29,10 @@
             <p>서울 가산초등학교</p>
             <strong>3학년 3반<span>학급정원 20명</span></strong>
             <div class="select-box">
-                <a href="#none">클래스 이동</a>
+                <a href="#none" class="btns border-btn blue round">클래스 이동</a>
                 <ul class="option-list up">
                     <li><a href="#none">3학년 3반</a></li>
-                    <li><a href="">4학년 우리반</a></li>
+                    <li><a href="#none">4학년 우리반</a></li>
                 </ul>
             </div>  
         </div>
@@ -56,14 +56,18 @@
 </div>
 
 <script>
-   $('.nav_btn').on('click', function(){
-      $('.menu-list-area').show()
-      $('.wrap').addClass('popup-tea-height');
-   });
-   $('.list-popup > a').on('click', function(){
-      $('.menu-list-area').hide()
-      $('.wrap').removeClass('popup-tea-height');
-   });
+   // 메뉴 열기
+   $('.nav_btn').on('click',function(e){
+        e.preventDefault();
+        $('.menu-list-area').show();
+        $('.menu-list-area').stop().animate({'left':'0'},300);
+    });
+    // 메뉴닫기
+    $('.list-popup > a').on('click',function(e){
+        e.preventDefault();
+      //   $('.menu-list-area').hide();
+        $('.menu-list-area').stop().animate({'left':'-100%'},300);
+    });
 
    $('.select-box > a').on('click', function(e){
       e.preventDefault();

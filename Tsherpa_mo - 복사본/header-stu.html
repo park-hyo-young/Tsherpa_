@@ -6,19 +6,19 @@
 </header>
 <!-- 학생 팝업 -->
 <div class="menu-list-area">
-    <div class="inner">
+    <div class="menu-inner">
         <div class="list-popup flex-btw">
             <h2><a href="#none"><img src="images/mo_ic_home.png" alt="홈화면으로"></a></h2>
             <a href="#none"><img src="images/mo_icon_close.png" alt="메뉴 닫기"></a>
         </div>
         <!-- 개설된 클래스 없을 때 -->
-        <!-- <figure class="none-class-box">
+        <figure class="none-class-box">
             <img src="images/mo_img_class.png" alt="개설된 클래스가 없습니다. ">
         </figure>
         <div class="none-class-ment">
             <strong>회원 정보 수정 페이지에서<br>초대 코드를 입력해주세요.</strong>
             <p>초대코드는 선생님께 문의</p>
-        </div> -->
+        </div>
         <!-- 개설된 클래스 있을 때 -->
         <figure class="have-class-box">
             <img src="images/3.svg" alt="서울 가산 초등학교">
@@ -38,12 +38,16 @@
 </div>
 
 <script>
-    $('.nav_btn').on('click', function(){
-        $('.menu-list-area').show()
-        $('.wrap').addClass('popup-stu-height');
+    // 메뉴 열기
+    $('.nav_btn').on('click',function(e){
+        e.preventDefault();
+        $('.menu-list-area').show();
+        $('.menu-list-area').stop().animate({'left':'0'},300);
     });
-    $('.list-popup > a').on('click', function(){
-        $('.menu-list-area').hide()
-        $('.wrap').removeClass('popup-stu-height');
+    // 메뉴닫기
+    $('.list-popup > a').on('click',function(e){
+        e.preventDefault();
+        $('.menu-list-area').hide(300);
+        $('.menu-list-area').stop().animate({'left':'-100%'},300);
     });
 </script>
