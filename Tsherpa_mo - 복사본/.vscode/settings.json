@@ -1,3 +1,20 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+
+    "liveSassCompile.settings.formats":[
+        // You can add more
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../../css"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.includeItems":[	// 경로에 있는 .scss파일만 컴파일
+        "/css/scss/style.scss"
+    ]
 }

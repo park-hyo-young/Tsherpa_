@@ -31,8 +31,7 @@
                 left: 0;
                 top: 0.3rem;
                 color: #bbb;
-                font-size: 1.2rem;
-                
+                font-size: 1.2rem;;
             }
         }
         .checkbox-arer {
@@ -75,8 +74,17 @@
                 width: 10rem;
             }
         }
-        .time {
-            position: absolute;
+        .code-box {
+            position: relative;
+            padding: 1.6rem 0 3.15rem;
+            .time {
+                position: absolute;
+                top: 50%;
+                right: 1.5rem;
+                transform: translateY(-50%);
+                color: #666;
+                font-size: 1.4rem;
+            }
         }
     }
 }  

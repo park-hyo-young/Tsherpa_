@@ -177,6 +177,11 @@
             text-align: center;
         }
     }
+    .btns {
+        &.naver-btn {
+            margin-bottom: .75rem;
+        }
+    }
 }
 
 // SNS계정 찾기
