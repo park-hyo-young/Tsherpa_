@@ -192,6 +192,7 @@
 }
 // 급식 정보
 .school-meal-date {
+    position: relative;
     margin-bottom: 3.75rem;
     // 날짜 이동 버튼
     a {
@@ -203,7 +204,8 @@
         }
     }
     // 날짜
-    span {
+    p {
+        text-align: center;
         padding: 0.25rem 0;
         color: #000;
         font-size: 1.4rem;
@@ -224,6 +226,25 @@
             &:first-child {
                 margin-top: 3rem;
             }
+        }
+    }
+}
+.swiper-button-prev, .swiper-button-next {
+    &::after {
+        display: none;
+    }
+    a {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        img {
+            width: 100%;
+        }
+        &.prex-btn {
+            left: -1rem;
+        }
+        &.next-btn {
+            right: -1rem;
         }
     }
 }

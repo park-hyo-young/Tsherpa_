@@ -43,6 +43,14 @@ $(document).ready(function(){
             clickable: true,
         },
     });
+
+    // 급식 슬라이드
+    var swiper = new Swiper(".school-meal-menu", {
+        navigation: {
+            nextEl: ".next-btn",
+            prevEl: ".prex-btn",
+        },
+    });
 })
 
 // lode html
